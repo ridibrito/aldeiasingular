@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 const BRAND_PRIMARY = "#5E2A84"; // roxo principal para ícones/CTAs
-const HOTMART_LINK = process.env.NEXT_PUBLIC_HOTMART_CHECKOUT_URL || "https://pay.hotmart.com/D101364302K?checkoutMode=2";
+const HOTMART_LINK =  "https://pay.hotmart.com/D101364302K?checkoutMode=2";
 
 type Testimonial = {
   name?: string;
@@ -55,7 +55,7 @@ function ArrowRight({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-function PrimaryButton({ href, children, onClick, hotmart = false, variant = "primary" }: { href?: string; children: React.ReactNode; onClick?: (e: React.MouseEvent) => void; hotmart?: boolean; variant?: "primary" | "whatsapp" }) {
+function PrimaryButton({ href, children, onClick, hotmart = false, variant = "primary", target }: { href?: string; children: React.ReactNode; onClick?: (e: React.MouseEvent) => void; hotmart?: boolean; variant?: "primary" | "whatsapp"; target?: React.HTMLAttributeAnchorTarget }) {
   const base =
     "inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-semibold shadow-sm transition-colors";
   const palette =
@@ -67,9 +67,10 @@ function PrimaryButton({ href, children, onClick, hotmart = false, variant = "pr
     return (
       <a
         href={href}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
         className={`${className}${hotmart ? " hotmart-fb hotmart__button-checkout" : ""}`}
         onClick={(e) => {
-          if (hotmart) e.preventDefault();
           onClick?.(e);
         }}
       >
@@ -93,7 +94,6 @@ function SecondaryButton({ href, children, hotmart = false }: { href?: string; c
         href={href}
         className={`${className}${hotmart ? " hotmart-fb hotmart__button-checkout" : ""}`}
         onClick={(e) => {
-          if (hotmart) e.preventDefault();
         }}
       >
         {children}
@@ -373,7 +373,7 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-6">
-              <PrimaryButton href={HOTMART_LINK} hotmart variant="whatsapp">Ir para o checkout</PrimaryButton>
+              <PrimaryButton target="_blank" href={HOTMART_LINK} hotmart variant="whatsapp">Ir para o checkout</PrimaryButton>
             </div>
           </div>
         </div>
