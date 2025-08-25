@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Aldeia Singular – Pais acolhidos. Filhos respeitados. Lares fortalecidos.",
+  title: "Aldeia Singular – Pais acolhidos. Filhos compreendidos. Lares fortalecidos.",
   description:
-    "A maior comunidade brasileira de mães e pais de crianças com Altas Habilidades/Superdotação. Apoio, direção e pertencimento para transformar vidas.",
+    "Maior comunidade brasileira de mães e pais de filhos com AHSD, oferecendo apoio, direção e pertencimento para transformar vidas.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -25,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aldeia Singular",
     description:
-      "Apoio, clareza e pertencimento para mães e pais de crianças com AHSD.",
+      "Maior comunidade brasileira de mães e pais de filhos com AHSD, oferecendo apoio, direção e pertencimento para transformar vidas.",
     url: "/",
     siteName: "Aldeia Singular",
     type: "website",
@@ -34,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aldeia Singular",
     description:
-      "Apoio, clareza e pertencimento para mães e pais de crianças com AHSD.",
+      "Maior comunidade brasileira de mães e pais de filhos com AHSD, oferecendo apoio, direção e pertencimento para transformar vidas.",
   },
 };
 
@@ -83,7 +79,7 @@ export default function RootLayout({
           />
         ) : null}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${poppins.variable} antialiased`}>
         {gtmId ? (
           <noscript>
             <iframe
