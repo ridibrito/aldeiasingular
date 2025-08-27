@@ -491,19 +491,24 @@ export default function Home() {
           </div>
           
           {/* Encontros mensais */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl blur-xl opacity-30 transform rotate-3"></div>
-              <div className="absolute inset-0 bg-gradient-to-bl from-blue-200 to-purple-200 rounded-3xl blur-lg opacity-20 transform -rotate-2"></div>
-              <Image 
-                src="/ione.jpg" 
-                alt="Encontros mensais ao vivo online" 
-                width={400} 
-                height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
-              />
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
+            
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Encontros" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Encontros mensais ao vivo online</h3>
@@ -512,11 +517,23 @@ export default function Home() {
                 Roda de Conversa ao vivo online com mediação da PhD Ângela Virgolim e participação de especialistas convidados, com objetivo de ampliar a visão dos pais sobre temas essenciais ligados às Altas Habilidades e Superdotação, bem-estar familiar, cuidados parentais, autocuidado e desenvolvimento pessoal.
               </p>
             </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <Image 
+                src="/ione.jpg" 
+                alt="Encontros mensais ao vivo online" 
+                width={400} 
+                height={400} 
+                className="rounded-2xl mx-auto shadow-lg"
+              />
+            </div>
           </div>
           
           {/* Plantões de dúvidas */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
-            <div className="space-y-4">
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Plantões" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Plantões de dúvidas com especialistas</h3>
@@ -525,33 +542,53 @@ export default function Home() {
                 Duas vezes por mês os membros da Aldeia Singular terão encontros temáticos com especialistas nas áreas de psicologia, neuropsicologia, pedagogia, neuropedagogia e outros profissionais. Com o objetivo de oferecer suporte direto, técnico e emocional aos pais, com base em dúvidas reais previamente mapeadas.
               </p>
             </div>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-bl from-blue-200 to-purple-200 rounded-3xl blur-xl opacity-30 transform -rotate-3"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-pink-200 to-blue-200 rounded-3xl blur-lg opacity-20 transform rotate-2"></div>
+            
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
                 src="/ione.jpg" 
                 alt="Plantões de dúvidas com especialistas" 
                 width={400} 
                 height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                className="rounded-2xl mx-auto shadow-lg"
               />
             </div>
           </div>
           
           {/* Trilhas de conhecimento */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl blur-xl opacity-30 transform rotate-2"></div>
-              <div className="absolute inset-0 bg-gradient-to-tl from-purple-200 to-blue-200 rounded-3xl blur-lg opacity-20 transform -rotate-1"></div>
-              <Image 
-                src="/ione.jpg" 
-                alt="Trilhas de conhecimento" 
-                width={400} 
-                height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
-              />
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
+            
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Trilhas" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Trilhas de conhecimento</h3>
@@ -560,11 +597,23 @@ export default function Home() {
                 Na Aldeia Singular, chamamos nossas trilhas de conhecimento como a Montanha do Amanhã. Nela iremos desbravar o universo das Altas Habilidades e Superdotação em uma jornada progressiva de aprendizado para conhecer e lidar com as necessidades e características únicas dos seus filhos.
               </p>
             </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <Image 
+                src="/ione.jpg" 
+                alt="Trilhas de conhecimento" 
+                width={400} 
+                height={400} 
+                className="rounded-2xl mx-auto shadow-lg"
+              />
+            </div>
           </div>
           
           {/* Ferramentas e Estratégias */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
-            <div className="space-y-4">
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Ferramentas" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Ferramentas e Estratégias Práticas</h3>
@@ -573,33 +622,53 @@ export default function Home() {
                 Acesso à ferramentas, protocolos e estratégias práticas para que você atue com segurança, empatia e conhecimento no dia a dia com os seus filhos. Guias de identificação, roteiros de enriquecimento, planilhas de rotina e protocolos de manejo de crise emocional.
               </p>
             </div>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-bl from-purple-200 to-blue-200 rounded-3xl blur-xl opacity-30 transform -rotate-2"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-pink-200 rounded-3xl blur-lg opacity-20 transform rotate-3"></div>
+            
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
                 src="/ione.jpg" 
                 alt="Ferramentas e Estratégias Práticas" 
                 width={400} 
                 height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                className="rounded-2xl mx-auto shadow-lg"
               />
             </div>
           </div>
           
           {/* Grupos Locais */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-pink-200 rounded-3xl blur-xl opacity-30 transform rotate-1"></div>
-              <div className="absolute inset-0 bg-gradient-to-tl from-pink-200 to-purple-200 rounded-3xl blur-lg opacity-20 transform -rotate-3"></div>
-              <Image 
-                src="/ione.jpg" 
-                alt="Grupos Locais" 
-                width={400} 
-                height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
-              />
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
+            
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Grupos" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Grupos Locais</h3>
@@ -608,11 +677,23 @@ export default function Home() {
                 Cada grupo local é uma Aldeia, com aproximadamente 30 membros separados por gênero (grupo de mães e grupo de pais), cidade ou região. Um espaço seguro e transformador para trocas de experiências com outros pais que passam pelo mesmo.
               </p>
             </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+              <Image 
+                src="/ione.jpg" 
+                alt="Grupos Locais" 
+                width={400} 
+                height={400} 
+                className="rounded-2xl mx-auto shadow-lg"
+              />
+            </div>
           </div>
           
           {/* Acervo Digital */}
-          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
-            <div className="space-y-4">
+          <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            {/* Conteúdo - em mobile fica embaixo da imagem */}
+            <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/ione.jpg" alt="Ícone Acervo" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Acervo Digital</h3>
@@ -621,15 +702,30 @@ export default function Home() {
                 Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da PhD Ângela Virgolim, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
               </p>
             </div>
-            <div className="text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-bl from-pink-200 to-blue-200 rounded-3xl blur-xl opacity-30 transform -rotate-1"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-3xl blur-lg opacity-20 transform rotate-2"></div>
+            
+            {/* Card grande com logo - visível apenas em desktop */}
+            <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
+              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
+                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
+                    <span className="text-2xl">🦉</span>
+                  </div>
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">Aldeia</div>
+                    <div className="text-2xl font-bold">Singular</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Imagem - visível apenas em mobile */}
+            <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
                 src="/ione.jpg" 
                 alt="Acervo Digital" 
                 width={400} 
                 height={400} 
-                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                className="rounded-2xl mx-auto shadow-lg"
               />
             </div>
           </div>
@@ -742,8 +838,8 @@ export default function Home() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-10 gap-8 items-center mb-12">
-            <div className={`col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+          <div className="flex flex-col lg:grid lg:grid-cols-10 gap-8 lg:items-center mb-12">
+            <div className={`order-1 lg:order-none lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
                 src="/angela_site.png" 
                 alt="PhD Ângela Virgolim" 
@@ -753,7 +849,7 @@ export default function Home() {
               />
             </div>
             
-            <div className={`col-span-6 space-y-6 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
+            <div className={`order-2 lg:order-none lg:col-span-6 space-y-6 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold text-[#43085e] mb-2">
                   Quem é Ângela Virgolim?
