@@ -152,7 +152,7 @@ function ArrowRight({ className = "w-5 h-5" }: { className?: string }) {
       className={className}
       aria-hidden="true"
     >
-      <path d="M12 4l1.41 1.41L9.83 9H20v2H9.83l3.58 3.59L12 16l-6-6 6-6z" />
+      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
     </svg>
   );
 }
@@ -161,7 +161,7 @@ function PrimaryButton({ href, children, onClick, hotmart = false, variant = "pr
   const base = "inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-semibold shadow-sm btn-hover";
   const palette = variant === "whatsapp" 
     ? " bg-[#25D366] hover:bg-[#1EBE5B]" 
-    : " bg-[#f05046] hover:bg-[#d93d33] border-2 border-[#f9b214]";
+    : " bg-[#43085e] hover:bg-[#3a074f] border-2 border-[#f9b214]";
   const className = base + palette;
   
   if (href) {
@@ -231,6 +231,19 @@ function FAQAccordion({ items }: { items: FAQ[] }) {
   );
 }
 
+function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+    </svg>
+  );
+}
 
 
 export default function Home() {
@@ -365,13 +378,13 @@ export default function Home() {
               <Image src="/ione.jpg" alt="Logo Aldeia Singular" width={48} height={48} className="rounded-full animate-pulse-slow w-12 h-12 sm:w-12 sm:h-12" />
               <span className="text-lg sm:text-xl font-bold">Aldeia Singular</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-up" style={{ color: BRAND_SECONDARY }}>
-              Pais acolhidos.<br />
-              Filhos compreendidos.<br />
-              Lares fortalecidos.
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-up">
+              <span style={{ color: BRAND_SECONDARY }}>Pais</span> <span style={{ color: 'white' }}>acolhidos</span>.<br />
+              <span style={{ color: BRAND_SECONDARY }}>Filhos</span> <span style={{ color: 'white' }}>compreendidos</span>.<br />
+              <span style={{ color: BRAND_SECONDARY }}>Lares</span> <span style={{ color: 'white' }}>fortalecidos</span>.
             </h1>
             <p className="text-base sm:text-lg text-white/90 animate-fade-in-up leading-relaxed">
-              Maior comunidade brasileira de mães e pais de filhos com AHSD, oferecendo apoio, direção e pertencimento para transformar vidas.
+              Maior comunidade brasileira de mães e pais de filhos com <span style={{ color: BRAND_SECONDARY , fontWeight: 'bold'}}>AHSD</span> , oferecendo apoio, direção e pertencimento para transformar vidas.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up pt-2">
               <PrimaryButton href={HOTMART_LINK} hotmart target="_blank">
@@ -395,44 +408,50 @@ export default function Home() {
       >
         <div className="container">
           <div className={`text-center mb-8 sm:mb-12 ${isVisible.beneficios ? 'animate-fade-in-up' : 'section-enter'}`}>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 px-4" style={{ color: BRAND_SECONDARY }}>
+            <h2 className="text-xl sm:text-2xl md:text-5xl font-bold mb-4 px-4 text-[#43085e]" >
               Quando você fortalece quem cuida, você transforma o mundo de quem é cuidado.
             </h2>
-            <p className="text-base sm:text-lg text-[#43085e] max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-[#263238] max-w-3xl mx-auto px-4">
               Acreditamos na força da comunidade como um espaço seguro e transformador para quem cuida de crianças com AHSD, promovendo empoderamento parental, desenvolvimento infantil saudável e bem-estar familiar.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl ${isVisible.beneficios ? 'animate-fade-in-left' : ''}`}>
+            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-left' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <HeartIcon className="w-6 h-6 icon-hover" />
+                <Image src="/ione.jpg" alt="Ícone Pais Acolhidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Pais acolhidos</h3>
-              <p className="text-sm sm:text-base text-[#43085e] leading-relaxed">
+              <p className="text-sm sm:text-base text-white leading-relaxed">
                 Na Aldeia Singular as mães e os pais são acolhidos em um senso de comunidade genuíno. Aprenda com especialistas e com outros pais que passam pelo mesmo, recebendo informações confiáveis e validadas sobre AHSD.
               </p>
             </div>
             
-            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl ${isVisible.beneficios ? 'animate-fade-in-up' : ''}`}>
+            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-up' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <UsersIcon className="w-6 h-6 icon-hover" />
+                <Image src="/ione.jpg" alt="Ícone Filhos Compreendidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Filhos compreendidos</h3>
-              <p className="text-sm sm:text-base text-[#43085e] leading-relaxed">
+              <p className="text-sm sm:text-base text-white leading-relaxed">
                 Compreenda e ajude seus filhos a se desenvolverem de forma saudável e equilibrada. Pais mais preparados para lidar com escola, médicos e outros cuidadores, criando ambientes enriquecedores.
               </p>
             </div>
             
-            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl ${isVisible.beneficios ? 'animate-fade-in-right' : ''}`}>
+            <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-right' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <HomeIcon className="w-6 h-6 icon-hover" />
+                <Image src="/ione.jpg" alt="Ícone Lares Fortalecidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Lares fortalecidos</h3>
-              <p className="text-sm sm:text-base text-[#43085e] leading-relaxed">
+              <p className="text-sm sm:text-base text-white leading-relaxed">
                 Lares emocionalmente mais estáveis e fortalecidos, com momentos de autocuidado e crescimento pessoal. Cuide de si mesmo sem culpa, com clareza e segurança sobre como agir em situações desafiadoras.
               </p>
             </div>
+          </div>
+          
+          <div className={`text-center mt-8 sm:mt-12 ${isVisible.beneficios ? 'animate-fade-in-up' : ''}`}>
+            <PrimaryButton href={HOTMART_LINK} hotmart target="_blank">
+              Quero me desenvolver <ArrowRight />
+            </PrimaryButton>
           </div>
         </div>
       </section>
@@ -440,15 +459,30 @@ export default function Home() {
       {/* Seção 03 - Como Funciona */}
       <section 
         id="como" 
-        className="section" 
+        className="section relative overflow-hidden" 
         style={{ backgroundColor: 'white' }}
         ref={(el) => {
           sectionRefs.current.como = el;
         }}
       >
-        <div className="container">
+        {/* Background com gradientes e formas fluidas */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Gradiente principal */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50"></div>
+          
+          {/* Formas fluidas decorativas */}
+          <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-20 blur-xl"></div>
+          <div className="absolute bottom-20 left-10 w-48 h-48 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-full opacity-30 blur-lg"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-pink-100 to-purple-100 rounded-full opacity-15 blur-2xl"></div>
+          
+          {/* Formas orgânicas */}
+          <div className="absolute top-40 left-20 w-32 h-32 bg-gradient-to-br from-purple-300 to-blue-300 rounded-full opacity-25 blur-md"></div>
+          <div className="absolute bottom-40 right-20 w-40 h-40 bg-gradient-to-tl from-pink-300 to-purple-300 rounded-full opacity-20 blur-lg"></div>
+        </div>
+        
+        <div className="container relative z-10">
           <div className={`text-center mb-12 ${isVisible.como ? 'animate-fade-in-up' : 'section-enter'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: BRAND_SECONDARY }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-[#43085e]">
               Uma comunidade completa para mães e pais de AHSD
             </h2>
             <p className="text-lg text-[#43085e] max-w-4xl mx-auto">
@@ -456,65 +490,147 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+          {/* Encontros mensais */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl blur-xl opacity-30 transform rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-bl from-blue-200 to-purple-200 rounded-3xl blur-lg opacity-20 transform -rotate-2"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Encontros mensais ao vivo online" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <VideoIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Encontros mensais ao vivo online</h3>
+                <Image src="/ione.jpg" alt="Ícone Encontros" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Encontros mensais ao vivo online</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Roda de Conversa ao vivo online com mediação da PhD Ângela Virgolim e participação de especialistas convidados, com objetivo de ampliar a visão dos pais sobre temas essenciais ligados às Altas Habilidades e Superdotação, bem-estar familiar, cuidados parentais, autocuidado e desenvolvimento pessoal.
               </p>
             </div>
-            
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-up' : ''}`}>
+          </div>
+          
+          {/* Plantões de dúvidas */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <UsersIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Plantões de dúvidas com especialistas</h3>
+                <Image src="/ione.jpg" alt="Ícone Plantões" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Plantões de dúvidas com especialistas</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Duas vezes por mês os membros da Aldeia Singular terão encontros temáticos com especialistas nas áreas de psicologia, neuropsicologia, pedagogia, neuropedagogia e outros profissionais. Com o objetivo de oferecer suporte direto, técnico e emocional aos pais, com base em dúvidas reais previamente mapeadas.
               </p>
             </div>
-            
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-bl from-blue-200 to-purple-200 rounded-3xl blur-xl opacity-30 transform -rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-pink-200 to-blue-200 rounded-3xl blur-lg opacity-20 transform rotate-2"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Plantões de dúvidas com especialistas" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+          
+          {/* Trilhas de conhecimento */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl blur-xl opacity-30 transform rotate-2"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-purple-200 to-blue-200 rounded-3xl blur-lg opacity-20 transform -rotate-1"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Trilhas de conhecimento" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <BookIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Trilhas de conhecimento</h3>
+                <Image src="/ione.jpg" alt="Ícone Trilhas" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Trilhas de conhecimento</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Na Aldeia Singular, chamamos nossas trilhas de conhecimento como a Montanha do Amanhã. Nela iremos desbravar o universo das Altas Habilidades e Superdotação em uma jornada progressiva de aprendizado para conhecer e lidar com as necessidades e características únicas dos seus filhos.
               </p>
             </div>
-            
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+          </div>
+          
+          {/* Ferramentas e Estratégias */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <ToolsIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Ferramentas e Estratégias Práticas</h3>
+                <Image src="/ione.jpg" alt="Ícone Ferramentas" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Ferramentas e Estratégias Práticas</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Acesso à ferramentas, protocolos e estratégias práticas para que você atue com segurança, empatia e conhecimento no dia a dia com os seus filhos. Guias de identificação, roteiros de enriquecimento, planilhas de rotina e protocolos de manejo de crise emocional.
               </p>
             </div>
-            
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-up' : ''}`}>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-bl from-purple-200 to-blue-200 rounded-3xl blur-xl opacity-30 transform -rotate-2"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-200 to-pink-200 rounded-3xl blur-lg opacity-20 transform rotate-3"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Ferramentas e Estratégias Práticas" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+          
+          {/* Grupos Locais */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-pink-200 rounded-3xl blur-xl opacity-30 transform rotate-1"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-pink-200 to-purple-200 rounded-3xl blur-lg opacity-20 transform -rotate-3"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Grupos Locais" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <GroupIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Grupos Locais</h3>
+                <Image src="/ione.jpg" alt="Ícone Grupos" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Grupos Locais</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Cada grupo local é uma Aldeia, com aproximadamente 30 membros separados por gênero (grupo de mães e grupo de pais), cidade ou região. Um espaço seguro e transformador para trocas de experiências com outros pais que passam pelo mesmo.
               </p>
             </div>
-            
-            <div className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+          </div>
+          
+          {/* Acervo Digital */}
+          <div className={`grid md:grid-cols-2 gap-10 items-center mb-16 ${isVisible.como ? 'animate-fade-in-right' : ''}`}>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 mb-4">
-                <LibraryIcon className="w-6 h-6 icon-hover" />
-                <h3 className="text-lg font-bold" style={{ color: BRAND_SECONDARY }}>Acervo Digital</h3>
+                <Image src="/ione.jpg" alt="Ícone Acervo" width={48} height={48} className="rounded-full w-12 h-12" />
+                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Acervo Digital</h3>
               </div>
-              <p className="text-[#43085e]">
+              <p className="text-[#43085e] text-lg leading-relaxed">
                 Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da PhD Ângela Virgolim, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
               </p>
+            </div>
+            <div className="text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-bl from-pink-200 to-blue-200 rounded-3xl blur-xl opacity-30 transform -rotate-1"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-200 to-pink-200 rounded-3xl blur-lg opacity-20 transform rotate-2"></div>
+              <Image 
+                src="/ione.jpg" 
+                alt="Acervo Digital" 
+                width={400} 
+                height={400} 
+                className="rounded-3xl mx-auto relative z-10 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
           
@@ -539,36 +655,77 @@ export default function Home() {
       >
         <div className="container">
           <div className={`text-center mb-8 ${isVisible.publico ? 'animate-fade-in-up' : 'section-enter'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: BRAND_SECONDARY }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#43085e]">
               Pra quem é a Aldeia Singular
             </h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "Você que acha que grupos de whatsapp/telegram grandes mais atrapalham do que ajudam",
-              "Mães e Pais que acreditam que cursos de AHSD não são suficientes",
-              "Pra quem busca um conhecimento sólido e com base científica única para cuidar do seu filho",
-              "Para quem não tem acesso financeiro suficiente para investir em conhecimento e consultas",
-              "Pais que buscam pertencimento e rede de apoio local",
-              "Compreender sobre AHSD com fundamentos e referencial teórico",
-              "Quem busca acolhimento e escuta ativa sem julgamentos",
-              "Famílias que precisam de direcionamento nas decisões e desafios",
-              "Pais que querem trocar experiências com quem vive as mesmas dores e alegrias",
-              "Quem busca clareza sobre o desenvolvimento do seu filho",
-              "Mães e pais que se sentem sozinhos e incompreendidos",
-              "Famílias que precisam reduzir a sobrecarga emocional e estresse"
+              {
+                title: "Grupos grandes não ajudam",
+                description: "Você que acha que grupos de whatsapp/telegram grandes mais atrapalham do que ajudam"
+              },
+              {
+                title: "Cursos não são suficientes",
+                description: "Mães e Pais que acreditam que cursos de AHSD não são suficientes"
+              },
+              {
+                title: "Conhecimento sólido",
+                description: "Pra quem busca um conhecimento sólido e com base científica única para cuidar do seu filho"
+              },
+              {
+                title: "Acesso financeiro limitado",
+                description: "Para quem não tem acesso financeiro suficiente para investir em conhecimento e consultas"
+              },
+              {
+                title: "Pertencimento e rede",
+                description: "Pais que buscam pertencimento e rede de apoio local"
+              },
+              {
+                title: "Fundamentos teóricos",
+                description: "Compreender sobre AHSD com fundamentos e referencial teórico"
+              },
+              {
+                title: "Acolhimento sem julgamentos",
+                description: "Quem busca acolhimento e escuta ativa sem julgamentos"
+              },
+              {
+                title: "Direcionamento",
+                description: "Famílias que precisam de direcionamento nas decisões e desafios"
+              },
+              {
+                title: "Troca de experiências",
+                description: "Pais que querem trocar experiências com quem vive as mesmas dores e alegrias"
+              },
+              {
+                title: "Clareza no desenvolvimento",
+                description: "Quem busca clareza sobre o desenvolvimento do seu filho"
+              },
+              {
+                title: "Sentir-se compreendido",
+                description: "Mães e pais que se sentem sozinhos e incompreendidos"
+              },
+              {
+                title: "Reduzir sobrecarga",
+                description: "Famílias que precisam reduzir a sobrecarga emocional e estresse"
+              }
             ].map((item, index) => (
               <div 
                 key={index} 
-                className={`rounded-2xl border-2 border-[#f05046] bg-white/80 backdrop-blur p-6 card-hover ${
+                className={`bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
                   isVisible.publico ? `animate-fade-in-${index % 3 === 0 ? 'left' : index % 3 === 1 ? 'up' : 'right'}` : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 icon-hover" />
-                  <p className="text-[#43085e] font-medium">{item}</p>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center">
+                    <Image src="/ione.jpg" alt="Ícone" width={32} height={32} className="rounded-full w-8 h-8" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-[#43085e] mb-2">{item.title}</h3>
+                    <p className="text-[#43085e] text-sm leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -584,40 +741,79 @@ export default function Home() {
           sectionRefs.current.angela = el;
         }}
       >
-        <div className="container">
-          <div className={`text-center mb-8 ${isVisible.angela ? 'animate-fade-in-up' : 'section-enter'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: BRAND_SECONDARY }}>
-              A mente por trás da Aldeia Singular
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className={`text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-10 gap-8 items-center mb-12">
+            <div className={`col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
                 src="/angela_site.png" 
                 alt="PhD Ângela Virgolim" 
-                width={800} 
-                height={800} 
-                className="rounded-lg"
+                width={400} 
+                height={600} 
+                className="rounded-2xl w-full h-auto"
               />
             </div>
             
-            <div className={`space-y-6 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
-              <blockquote className="text-lg italic text-[#43085e] border-l-4 border-[#f05046] pl-6">
-                &ldquo;Nos meus últimos 30 anos formei mais de 500 profissionais para atuarem em AHSD, acolhi mais de 2000 famílias com os mais variados desafios. Porém, nos últimos anos muitos pais me afirmaram que cursos não eram suficientes, que existem muitos e nem todos são confiáveis. Ter acesso a profissionais especializados é caro e muitas vezes o que eles precisam é apoio, suporte e uma base conhecimento de referência. Foi escutando por anos e entendendo as dores de cada um desses pais que eu acolhi, que resolvi não só atuar na formação de profissionais, mas também de construir algo que pudesse mudar a vida das famílias, com um olhar direcionado a cuidar de quem cuida.&rdquo;
-              </blockquote>
+            <div className={`col-span-6 space-y-6 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
+              <div>
+                <h3 className="text-3xl md:text-4xl font-bold text-[#43085e] mb-2">
+                  Quem é Ângela Virgolim?
+                </h3>
+                <p className="text-lg text-[#43085e]/80 mb-6">
+                  <span className="inline-block mr-2">⭐</span>
+                  Criadora da Aldeia Singular
+                </p>
+              </div>
               
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Angela Virgolim</h3>
-                <p className="text-[#43085e]">
+              <div className="space-y-4 text-[#43085e] leading-relaxed">
+                <p className="text-base">
                   Psicóloga, PhD em Psicologia Educacional pela University of Connecticut, especializando-se em Psicologia da Superdotação pelo Renzulli Center for Creativity, Gifted Education, and Talent Development.
                 </p>
-                <ul className="space-y-2 text-sm text-[#43085e]">
-                  <li>• Idealizadora e CEO do Instituto Virgolim</li>
-                  <li>• Ex-Presidente do Conselho Brasileiro para Superdotação</li>
-                  <li>• Professora aposentada da Universidade de Brasília</li>
-                  <li>• Autora de mais de 50 publicações sobre AHSD</li>
-                </ul>
+                <p className="text-base">
+                  Nos meus últimos 30 anos formei mais de 500 profissionais para atuarem em AHSD, acolhi mais de 2000 famílias com os mais variados desafios. Porém, nos últimos anos muitos pais me afirmaram que cursos não eram suficientes, que existem muitos e nem todos são confiáveis.
+                </p>
+                <p className="text-base">
+                  Ter acesso a profissionais especializados é caro e muitas vezes o que eles precisam é apoio, suporte e uma base conhecimento de referência. Foi escutando por anos e entendendo as dores de cada um desses pais que eu acolhi, que resolvi não só atuar na formação de profissionais, mas também de construir algo que pudesse mudar a vida das famílias, com um olhar direcionado a cuidar de quem cuida.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Subseção - Principais realizações */}
+          <div className={`${isVisible.angela ? 'animate-fade-in-up' : ''}`}>
+            <h4 className="text-2xl font-bold text-[#43085e] mb-6 text-center">
+              Principais realizações
+            </h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                </div>
+                <h5 className="font-semibold text-[#43085e] mb-2">Idealizadora e CEO</h5>
+                <p className="text-sm text-[#43085e]/80">Instituto Virgolim</p>
+              </div>
+              
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                </div>
+                <h5 className="font-semibold text-[#43085e] mb-2">Ex-Presidente</h5>
+                <p className="text-sm text-[#43085e]/80">Conselho Brasileiro para Superdotação</p>
+              </div>
+              
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                </div>
+                <h5 className="font-semibold text-[#43085e] mb-2">Professora</h5>
+                <p className="text-sm text-[#43085e]/80">Universidade de Brasília (aposentada)</p>
+              </div>
+              
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                </div>
+                <h5 className="font-semibold text-[#43085e] mb-2">Autora</h5>
+                <p className="text-sm text-[#43085e]/80">Mais de 50 publicações sobre AHSD</p>
               </div>
             </div>
           </div>
@@ -635,7 +831,7 @@ export default function Home() {
       >
         <div className="container">
           <div className={`text-center mb-8 ${isVisible.faq ? 'animate-fade-in-up' : 'section-enter'}`}>
-            <h2 className="text-2xl sm:text-3xl font-bold" style={{ color: BRAND_SECONDARY }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#43085e]">
               Perguntas Frequentes
             </h2>
           </div>
@@ -646,15 +842,15 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t-2 border-[#f05046] py-8" style={{ backgroundColor: BACKGROUND_COLOR }}>
+      <footer className="py-12 bg-gradient-to-br from-[#2a0a3a] to-[#43085e]">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Image src="/ione.jpg" alt="Logo Aldeia Singular" width={40} height={40} className="rounded-full" />
-                <span className="text-xl font-bold text-[#43085e]">Aldeia Singular</span>
+                <span className="text-xl font-bold text-white">Aldeia Singular</span>
               </div>
-              <p className="text-[#43085e] mb-4">
+              <p className="text-white/90 mb-4">
                 Junte-se a Aldeia Singular e vamos juntos criar a maior comunidade de mães e pais de filhos com AHSD.
               </p>
               <div className="flex gap-3">
@@ -662,40 +858,44 @@ export default function Home() {
                   Entrar na Aldeia Singular
                 </PrimaryButton>
                 <SecondaryButton href="https://wa.me/5511999999999">
-                  Tirar dúvidas via Whatsapp
+                  <WhatsAppIcon />
+                   Whatsapp
                 </SecondaryButton>
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <h4 className="font-bold text-[#43085e] mb-3">Links Principais</h4>
-                                 <ul className="space-y-2 text-sm text-[#43085e]">
-                   <li><a href="#beneficios" className="link-hover">Benefícios</a></li>
-                   <li><a href="#como" className="link-hover">Como funciona</a></li>
-                   <li><a href="#publico" className="link-hover">Pra quem é</a></li>
-                   <li><a href="#angela" className="link-hover">Sobre a Ângela</a></li>
-                 </ul>
-               </div>
-               
-               <div>
-                 <h4 className="font-bold text-[#43085e] mb-3">Suporte</h4>
-                 <ul className="space-y-2 text-sm text-[#43085e]">
-                   <li><a href="#" className="link-hover">Técnico</a></li>
-                   <li><a href="#" className="link-hover">Financeiro</a></li>
-                   <li><a href="https://wa.me/5511999999999" className="link-hover">Dúvidas (WhatsApp)</a></li>
-                   <li><a href="#" className="link-hover">Políticas</a></li>
-                 </ul>
+                <h4 className="font-bold text-white mb-3">Links Principais</h4>
+                <ul className="space-y-2 text-sm text-white/80">
+                  <li><a href="#beneficios" className="hover:text-[#f9b214] transition-colors">Benefícios</a></li>
+                  <li><a href="#como" className="hover:text-[#f9b214] transition-colors">Como funciona</a></li>
+                  <li><a href="#publico" className="hover:text-[#f9b214] transition-colors">Pra quem é</a></li>
+                  <li><a href="#angela" className="hover:text-[#f9b214] transition-colors">Sobre a Ângela</a></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold text-white mb-3">Suporte</h4>
+                <ul className="space-y-2 text-sm text-white/80">
+                  <li><a href="#" className="hover:text-[#f9b214] transition-colors">Técnico</a></li>
+                  <li><a href="#" className="hover:text-[#f9b214] transition-colors">Financeiro</a></li>
+                  <li><a href="https://wa.me/5511999999999" className="hover:text-[#f9b214] transition-colors">Dúvidas (WhatsApp)</a></li>
+                  <li><a href="#" className="hover:text-[#f9b214] transition-colors">Políticas</a></li>
+                </ul>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-[#43085e]/20 pt-6 text-center">
-            <p className="text-sm text-[#43085e]/60 mb-2">
+          <div className="border-t border-white/20 pt-6 text-center">
+            <p className="text-sm text-white/70 mb-2">
               A Aldeia Singular não substitui as avaliações para identificação de Altas Habilidades e Superdotação e outras Neurodivergências. Somos uma comunidade de mães e pais de filhos de AHSD, que buscam desenvolvimento pessoal, educação parental e bem-estar.
             </p>
-            <p className="text-sm text-[#43085e]/60">
+            <p className="text-sm text-white/70 mb-2">
               © 2024 Aldeia Singular. Todos os direitos reservados.
+            </p>
+            <p className="text-sm text-white/60">
+              Desenvolvido por <span className="font-semibold text-white">COEXPERTS</span>
             </p>
           </div>
         </div>
