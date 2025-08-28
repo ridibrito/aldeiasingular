@@ -492,18 +492,16 @@ export default function Home() {
           
           {/* Encontros mensais */}
           <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className="rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/1.png" 
+                  alt="Encontros mensais ao vivo online" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
@@ -521,11 +519,11 @@ export default function Home() {
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/1.png" 
                 alt="Encontros mensais ao vivo online" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto "
               />
             </div>
           </div>
@@ -543,47 +541,43 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className="rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/2.png" 
+                  alt="Plantões de dúvidas com especialistas" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/2.png" 
                 alt="Plantões de dúvidas com especialistas" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto "
               />
             </div>
           </div>
           
           {/* Trilhas de conhecimento */}
           <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className="rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/3.png" 
+                  alt="Trilhas de conhecimento" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
@@ -601,11 +595,11 @@ export default function Home() {
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/3.png" 
                 alt="Trilhas de conhecimento" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto "
               />
             </div>
           </div>
@@ -623,47 +617,43 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className="rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/4.png" 
+                  alt="Ferramentas e Estratégias Práticas" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/4.png" 
                 alt="Ferramentas e Estratégias Práticas" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto "
               />
             </div>
           </div>
           
           {/* Grupos Locais */}
           <div className={`grid grid-cols-1 lg:grid-cols-10 gap-8 items-center mb-16 ${isVisible.como ? 'animate-fade-in-left' : ''}`}>
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className="rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/6.png" 
+                  alt="Grupos Locais" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
@@ -681,11 +671,11 @@ export default function Home() {
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/6.png" 
                 alt="Grupos Locais" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto"
               />
             </div>
           </div>
@@ -703,29 +693,27 @@ export default function Home() {
               </p>
             </div>
             
-            {/* Card grande com logo - visível apenas em desktop */}
+            {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
-              <div className="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-96">
-                <div className="bg-gradient-to-br from-purple-400 to-purple-600 rounded-full p-8 border-2 border-orange-400 flex flex-col items-center">
-                  <div className="w-16 h-16 bg-pink-300 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">🦉</span>
-                  </div>
-                  <div className="text-white text-center">
-                    <div className="text-xl font-bold">Aldeia</div>
-                    <div className="text-2xl font-bold">Singular</div>
-                  </div>
-                </div>
+              <div className=" rounded-2xl p-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image 
+                  src="/quebra_cabeca/5.png" 
+                  alt="Acervo Digital" 
+                  width={350} 
+                  height={350} 
+                  className="rounded-xl w-full h-full object-cover"
+                />
               </div>
             </div>
             
             {/* Imagem - visível apenas em mobile */}
             <div className={`lg:hidden text-center ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <Image 
-                src="/ione.jpg" 
+                src="/quebra_cabeca/5.png" 
                 alt="Acervo Digital" 
                 width={400} 
                 height={400} 
-                className="rounded-2xl mx-auto shadow-lg"
+                className="rounded-2xl mx-auto"
               />
             </div>
           </div>
