@@ -356,6 +356,13 @@ export default function Home() {
 
   return (
     <div className="font-sans" style={{ backgroundColor: BACKGROUND_COLOR }}>
+      {/* Barra de Aviso */}
+        <div className="bg-[#49014E] text-white pt-2 pb-[-1] px-4">
+        <div className="container mx-auto flex items-center justify-center">
+            <Image src="/branco.png" alt="Logo Aldeia Singular" width={64} height={32} className="h-8 w-auto" />
+        </div>
+      </div>
+      
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-[100svh] flex items-center">
         <Image
@@ -368,10 +375,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="container relative px-4 py-8 sm:py-12 md:py-16">
           <div className="max-w-2xl space-y-4 sm:space-y-6 text-white">
-            <div className="flex items-center gap-3 animate-fade-in-up">
-              <Image src="/ione.jpg" alt="Logo Aldeia Singular" width={48} height={48} className="rounded-full animate-pulse-slow w-12 h-12 sm:w-12 sm:h-12" />
-              <span className="text-lg sm:text-xl font-bold">Aldeia Singular</span>
-            </div>
+            
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-up">
               <span style={{ color: BRAND_SECONDARY }}>Pais</span> <span style={{ color: 'white' }}>acolhidos</span>.<br />
               <span style={{ color: BRAND_SECONDARY }}>Filhos</span> <span style={{ color: 'white' }}>compreendidos</span>.<br />
@@ -411,7 +415,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-left' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <Image src="/ione.jpg" alt="Ícone Pais Acolhidos" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Pais Acolhidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Pais acolhidos</h3>
               <p className="text-sm sm:text-base text-white leading-relaxed">
@@ -421,7 +425,7 @@ export default function Home() {
             
             <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-up' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <Image src="/ione.jpg" alt="Ícone Filhos Compreendidos" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Filhos Compreendidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Filhos compreendidos</h3>
               <p className="text-sm sm:text-base text-white leading-relaxed">
@@ -431,7 +435,7 @@ export default function Home() {
             
             <div className={`text-center card-hover p-4 sm:p-6 rounded-2xl bg-[#43085e] ${isVisible.beneficios ? 'animate-fade-in-right' : ''}`}>
               <div className="flex justify-center mb-3 sm:mb-4">
-                <Image src="/ione.jpg" alt="Ícone Lares Fortalecidos" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Lares Fortalecidos" width={48} height={48} className="rounded-full w-12 h-12" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3" style={{ color: BRAND_SECONDARY }}>Lares fortalecidos</h3>
               <p className="text-sm sm:text-base text-white leading-relaxed">
@@ -500,7 +504,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Encontros" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Encontros" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Encontros mensais ao vivo online</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -525,7 +529,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Plantões" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Plantões" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Plantões de dúvidas com especialistas</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -576,7 +580,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Trilhas" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Trilhas" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Trilhas de conhecimento</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -601,7 +605,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Ferramentas" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Ferramentas" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Ferramentas e Estratégias Práticas</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -652,7 +656,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Grupos" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Grupos" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Grupos Locais</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -677,7 +681,7 @@ export default function Home() {
             {/* Conteúdo - em mobile fica embaixo da imagem */}
             <div className={`lg:col-span-6 space-y-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <div className="flex items-center gap-3 mb-4">
-                <Image src="/ione.jpg" alt="Ícone Acervo" width={48} height={48} className="rounded-full w-12 h-12" />
+                <Image src="/logo.png" alt="Ícone Acervo" width={48} height={48} className="rounded-full w-12 h-12" />
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Acervo Digital</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
@@ -796,7 +800,7 @@ export default function Home() {
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center">
-                    <Image src="/ione.jpg" alt="Ícone" width={32} height={32} className="rounded-full w-8 h-8" />
+                    <Image src="/logo.png" alt="Ícone" width={32} height={32} className="rounded-full w-8 h-8" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-[#43085e] mb-2">{item.title}</h3>
@@ -863,7 +867,7 @@ export default function Home() {
               {/* Primeira linha - 3 cards nas colunas 1, 3 e 5 */}
               <div className="text-center p-4 md:col-start-1 lg:col-start-1">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                  <Image src="/logo.png" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Idealizadora e CEO</h5>
                 <p className="text-sm text-[#43085e]/80">Instituto Virgolim</p>
@@ -871,7 +875,7 @@ export default function Home() {
 
               <div className="text-center p-4 md:col-start-3 lg:col-start-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                  <Image src="/logo.png" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Sócia fundadora </h5>
                 <p className="text-sm text-[#43085e]/80">e primeira presidente (do ConBraSD)</p>
@@ -879,7 +883,7 @@ export default function Home() {
               
               <div className="text-center p-4 md:col-start-5 lg:col-start-5">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                  <Image src="/logo.png" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Ex-Presidente</h5>
                 <p className="text-sm text-[#43085e]/80">Conselho Brasileiro para Superdotação</p>
@@ -888,7 +892,7 @@ export default function Home() {
               {/* Segunda linha - 2 cards nas colunas 2 e 4 */}
               <div className="text-center p-4 md:col-start-2 lg:col-start-2">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                  <Image src="/logo.png" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Professora</h5>
                 <p className="text-sm text-[#43085e]/80">Universidade de Brasília (aposentada)</p>
@@ -896,7 +900,7 @@ export default function Home() {
               
               <div className="text-center p-4 md:col-start-4 lg:col-start-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                  <Image src="/logo.png" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Autora</h5>
                 <p className="text-sm text-[#43085e]/80">Mais de 50 publicações sobre AHSD</p>
@@ -933,7 +937,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/ione.jpg" alt="Logo Aldeia Singular" width={40} height={40} className="rounded-full" />
+                <Image src="/logo.png" alt="Logo Aldeia Singular" width={40} height={40} className="rounded-full" />
                 <span className="text-xl font-bold text-white">Aldeia Singular</span>
               </div>
               <p className="text-white/90 mb-4">

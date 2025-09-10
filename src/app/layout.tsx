@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     initialScale: 1,
   },
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Aldeia Singular",
     description:
