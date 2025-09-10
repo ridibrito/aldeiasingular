@@ -278,11 +278,11 @@ export default function Home() {
     () => [
       {
         question: "A Aldeia Singular substitui a avaliação de identificação de AHSD?",
-        answer: "Não. A Aldeia Singular é uma comunidade de apoio e desenvolvimento para pais de crianças com AHSD. Para identificação formal, recomendamos buscar profissionais especializados."
+        answer: "Não. A Aldeia Singular é uma comunidade de apoio e informação  para pais e mães de crianças e adolescentes com AHSD.. Para identificação formal, recomendamos buscar profissionais especializados."
       },
       {
         question: "Terei acesso a consultas clínicas em grupo ou individualizadas?",
-        answer: "Oferecemos plantões de dúvidas com especialistas duas vezes por mês, além de encontros mensais com mediação da PhD Ângela Virgolim. Não substituímos consultas individuais."
+        answer: "Oferecemos plantões de dúvidas com especialistas duas vezes por mês, além de encontros mensais com mediação Com a dra. Angela Virgolim. Não substituímos consultas individuais."
       },
       {
         question: "Com a Aldeia Singular não precisarei procurar nenhum outro especialista?",
@@ -308,33 +308,27 @@ export default function Home() {
         question: "Posso cancelar minha assinatura a qualquer momento?",
         answer: "Sim, você pode cancelar sua assinatura a qualquer momento através da plataforma Hotmart."
       },
-      {
-        question: "Há material específico para lidar com a escola?",
-        answer: "Sim, oferecemos ferramentas e estratégias práticas para mediação escolar, incluindo roteiros de conversa e orientações sobre planos pedagógicos."
-      },
+      
       {
         question: "Como posso interagir com outros membros?",
         answer: "Através dos grupos locais, encontros online e nossa comunidade digital, você pode trocar experiências e se conectar com outros pais."
       },
       {
         question: "O conteúdo é baseado em evidências científicas?",
-        answer: "Sim, todo o conteúdo é desenvolvido com base em pesquisas científicas e experiência clínica da PhD Ângela Virgolim e especialistas convidados."
+        answer: "Sim, todo o conteúdo é desenvolvido com base em pesquisas científicas e experiência clínica da Dra. Angela Virgolim e especialistas convidados."
       },
       {
-        question: "Há suporte para casos de dupla excepcionalidade?",
-        answer: "Sim, abordamos especificamente a dupla excepcionalidade em nossas trilhas de conhecimento e encontros com especialistas."
+        question: "Há suporte para casos de dupla condição ou dupla excepcionalidade?",
+        answer: "Sim, esse tema será alvo de debate e abordamos especificamente dupla condição e dupla excepcionalidade em nossas trilhas de conhecimento e encontros com especialistas."
       },
       {
         question: "Posso acessar o conteúdo no meu tempo?",
         answer: "Sim, a maior parte do conteúdo é assíncrona, permitindo que você se desenvolva no seu próprio ritmo."
       },
-      {
-        question: "Há ferramentas para gestão emocional dos pais?",
-        answer: "Sim, oferecemos protocolos específicos para combate ao medo, dependência emocional, proteção emocional e combate à culpa."
-      },
+      
       {
         question: "Como funciona o acervo digital?",
-        answer: "O acervo inclui cursos, livros, vídeos, artigos e ferramentas curadas pela PhD Ângela Virgolim, disponíveis 24/7."
+        answer: "O acervo inclui cursos, livros, vídeos, artigos e ferramentas curadas pela dra. Ângela Virgolim, disponíveis 24/7."
       },
       {
         question: "Há encontros presenciais?",
@@ -345,7 +339,7 @@ export default function Home() {
         answer: "Sim, constantemente atualizamos nosso acervo com as mais recentes pesquisas e descobertas sobre AHSD."
       },
       {
-        question: "Há suporte para famílias com múltiplos filhos com AHSD?",
+        question: "Há suporte para famílias com mais de 1 filho com AHSD?",
         answer: "Sim, abordamos estratégias específicas para famílias com múltiplos filhos com características de AHSD."
       },
       {
@@ -384,15 +378,13 @@ export default function Home() {
               <span style={{ color: BRAND_SECONDARY }}>Lares</span> <span style={{ color: 'white' }}>fortalecidos</span>.
             </h1>
             <p className="text-base sm:text-lg text-white/90 animate-fade-in-up leading-relaxed">
-              Maior comunidade brasileira de mães e pais de filhos com <span style={{ color: BRAND_SECONDARY , fontWeight: 'bold'}}>AHSD</span> , oferecendo apoio, direção e pertencimento para transformar vidas.
+              Maior comunidade brasileira de mães e pais de filhos com <span style={{ color: BRAND_SECONDARY , fontWeight: 'bold'}}>Altas Habilidades e Superdotação - AHSD</span> , oferecendo apoio, direção e pertencimento para transformar vidas.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up pt-2">
               <PrimaryButton href={HOTMART_LINK} hotmart target="_blank">
                 Quero fazer parte <ArrowRight />
               </PrimaryButton>
-              <SecondaryButton href="#video">
-                Assistir vídeo
-              </SecondaryButton>
+             
             </div>
           </div>
         </div>
@@ -537,7 +529,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Plantões de dúvidas com especialistas</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
-                Duas vezes por mês os membros da Aldeia Singular terão encontros temáticos com especialistas nas áreas de psicologia, neuropsicologia, pedagogia, neuropedagogia e outros profissionais. Com o objetivo de oferecer suporte direto, técnico e emocional aos pais, com base em dúvidas reais previamente mapeadas.
+                Duas vezes por mês os membros da Aldeia Singular terão encontros temáticos com especialistas nas áreas de psicologia, neuropsicologia, pedagogia, neuropedagogia e outros profissionais. O objetivo é oferecer suporte direto, técnico e emocional aos pais, com base em dúvidas reais previamente mapeadas.
               </p>
             </div>
             
@@ -689,7 +681,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Acervo Digital</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
-                Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da PhD Ângela Virgolim, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
+                Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da Dra. Angela Virgolim,  PhD em Altas Habilidades e Superdotação, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
               </p>
             </div>
             
@@ -768,7 +760,7 @@ export default function Home() {
               },
               {
                 title: "Fundamentos teóricos",
-                description: "Compreender sobre AHSD com fundamentos e referencial teórico"
+                description: "Aqueles que desejam compreender as AHSD com fundamentos e referencial teórico"
               },
               {
                 title: "Acolhimento sem julgamentos",
@@ -780,7 +772,7 @@ export default function Home() {
               },
               {
                 title: "Troca de experiências",
-                description: "Pais que querem trocar experiências com quem vive as mesmas dores e alegrias"
+                description: "Pais e mães que querem trocar experiências com quem vive as mesmas dores e alegrias"
               },
               {
                 title: "Clareza no desenvolvimento",
@@ -850,7 +842,7 @@ export default function Home() {
               
               <div className="space-y-4 text-[#43085e] leading-relaxed">
                 <p className="text-base">
-                  Psicóloga, PhD em Psicologia Educacional pela University of Connecticut, especializando-se em Psicologia da Superdotação pelo Renzulli Center for Creativity, Gifted Education, and Talent Development.
+                  Sou psicóloga, PhD em Psicologia Educacional pela University of Connecticut, especializando-se em Psicologia da Superdotação pelo Renzulli Center for Creativity, Gifted Education, and Talent Development.
                 </p>
                 <p className="text-base">
                   Nos meus últimos 30 anos formei mais de 500 profissionais para atuarem em AHSD, acolhi mais de 2000 famílias com os mais variados desafios. Porém, nos últimos anos muitos pais me afirmaram que cursos não eram suficientes, que existem muitos e nem todos são confiáveis.
@@ -874,6 +866,14 @@ export default function Home() {
                 </div>
                 <h5 className="font-semibold text-[#43085e] mb-2">Idealizadora e CEO</h5>
                 <p className="text-sm text-[#43085e]/80">Instituto Virgolim</p>
+              </div>
+
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
+                </div>
+                <h5 className="font-semibold text-[#43085e] mb-2">Sócia fundadora </h5>
+                <p className="text-sm text-[#43085e]/80">e primeira presidente (do ConBraSD)</p>
               </div>
               
               <div className="text-center p-4">
