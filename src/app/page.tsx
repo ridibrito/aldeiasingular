@@ -359,7 +359,7 @@ export default function Home() {
       {/* Barra de Aviso */}
         <div className="bg-[#49014E] text-white pt-2 pb-[-1] px-4">
         <div className="container mx-auto flex items-center justify-center">
-            <Image src="/branco.png" alt="Logo Aldeia Singular" width={64} height={32} className="h-8 w-auto" />
+            <Image src="/branco.png" alt="Logo Aldeia Singular" width={96} height={48} className="h-12 w-auto" />
         </div>
       </div>
       
