@@ -328,7 +328,7 @@ export default function Home() {
       
       {
         question: "Como funciona o acervo digital?",
-        answer: "O acervo inclui cursos, livros, vídeos, artigos e ferramentas curadas pela dra. Ângela Virgolim, disponíveis 24/7."
+        answer: "O acervo inclui cursos, livros, vídeos, artigos e ferramentas curadas pela dra. Angela Virgolim, disponíveis 24/7."
       },
       {
         question: "Há encontros presenciais?",
@@ -340,7 +340,7 @@ export default function Home() {
       },
       {
         question: "Há suporte para famílias com mais de 1 filho com AHSD?",
-        answer: "Sim, abordamos estratégias específicas para famílias com múltiplos filhos com características de AHSD."
+        answer: "Sim, abordamos estratégias específicas para famílias com mais de 1 com características de AHSD."
       },
       {
         question: "Como posso tirar dúvidas específicas?",
@@ -504,7 +504,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold" style={{ color: BRAND_SECONDARY }}>Encontros mensais ao vivo online</h3>
               </div>
               <p className="text-[#43085e] text-lg leading-relaxed">
-                Roda de Conversa ao vivo online com mediação da PhD Ângela Virgolim e participação de especialistas convidados, com objetivo de ampliar a visão dos pais sobre temas essenciais ligados às Altas Habilidades e Superdotação, bem-estar familiar, cuidados parentais, autocuidado e desenvolvimento pessoal.
+                Roda de Conversa ao vivo online com mediação da PhD Angela Virgolim e participação de especialistas convidados, com objetivo de ampliar a visão dos pais sobre temas essenciais ligados às Altas Habilidades e Superdotação, bem-estar familiar, cuidados parentais, autocuidado e desenvolvimento pessoal.
               </p>
             </div>
             
@@ -809,7 +809,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Seção 06 - Ângela Virgolim */}
+      {/* Seção 06 - Angela Virgolim */}
       <section 
         id="angela" 
         className="section"
@@ -822,7 +822,7 @@ export default function Home() {
             <div className={`order-1 lg:order-none lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-left' : ''}`}>
               <Image 
                 src="/angela_site.png" 
-                alt="PhD Ângela Virgolim" 
+                alt="PhD Angela Virgolim" 
                 width={400} 
                 height={600} 
                 className="rounded-2xl w-full h-auto"
@@ -832,7 +832,7 @@ export default function Home() {
             <div className={`order-2 lg:order-none lg:col-span-6 space-y-6 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold text-[#43085e] mb-2">
-                  Quem é Ângela Virgolim?
+                  Quem é Angela Virgolim?
                 </h3>
                 <p className="text-lg text-[#43085e]/80 mb-6">
                   <span className="inline-block mr-2">⭐</span>
@@ -859,8 +859,9 @@ export default function Home() {
             <h4 className="text-2xl font-bold text-[#43085e] mb-6 text-center">
               Principais realizações
             </h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-4">
+            <div className="grid md:grid-cols-5 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+              {/* Primeira linha - 3 cards nas colunas 1, 3 e 5 */}
+              <div className="text-center p-4 md:col-start-1 lg:col-start-1">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
@@ -868,7 +869,7 @@ export default function Home() {
                 <p className="text-sm text-[#43085e]/80">Instituto Virgolim</p>
               </div>
 
-              <div className="text-center p-4">
+              <div className="text-center p-4 md:col-start-3 lg:col-start-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
@@ -876,7 +877,7 @@ export default function Home() {
                 <p className="text-sm text-[#43085e]/80">e primeira presidente (do ConBraSD)</p>
               </div>
               
-              <div className="text-center p-4">
+              <div className="text-center p-4 md:col-start-5 lg:col-start-5">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
@@ -884,7 +885,8 @@ export default function Home() {
                 <p className="text-sm text-[#43085e]/80">Conselho Brasileiro para Superdotação</p>
               </div>
               
-              <div className="text-center p-4">
+              {/* Segunda linha - 2 cards nas colunas 2 e 4 */}
+              <div className="text-center p-4 md:col-start-2 lg:col-start-2">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
@@ -892,7 +894,7 @@ export default function Home() {
                 <p className="text-sm text-[#43085e]/80">Universidade de Brasília (aposentada)</p>
               </div>
               
-              <div className="text-center p-4">
+              <div className="text-center p-4 md:col-start-4 lg:col-start-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-200 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Image src="/ione.jpg" alt="Ícone" width={24} height={24} className="rounded-full w-6 h-6" />
                 </div>
@@ -955,7 +957,7 @@ export default function Home() {
                   <li><a href="#beneficios" className="hover:text-[#f9b214] transition-colors">Benefícios</a></li>
                   <li><a href="#como" className="hover:text-[#f9b214] transition-colors">Como funciona</a></li>
                   <li><a href="#publico" className="hover:text-[#f9b214] transition-colors">Pra quem é</a></li>
-                  <li><a href="#angela" className="hover:text-[#f9b214] transition-colors">Sobre a Ângela</a></li>
+                  <li><a href="#angela" className="hover:text-[#f9b214] transition-colors">Sobre a Angela</a></li>
                 </ul>
               </div>
               
