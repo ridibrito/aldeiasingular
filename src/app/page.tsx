@@ -674,7 +674,7 @@ export default function Home() {
               <p className="text-[#43085e] text-lg leading-relaxed">
                 Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da Dra. Angela Virgolim,  PhD em Altas Habilidades e Superdotação, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
               </p>
-            </div]
+            </div>
             
             {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
