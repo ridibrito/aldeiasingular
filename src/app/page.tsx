@@ -363,6 +363,10 @@ export default function Home() {
         <div className="container relative px-4 py-8 sm:py-12 md:py-16">
           <div className="max-w-2xl space-y-4 sm:space-y-6 text-white">
             
+            <div className="mb-6 sm:mb-8 animate-fade-in-up">
+              <Image src="/branco.png" alt="Logo Aldeia Singular" width={200} height={150} className="w-auto h-auto" />
+            </div>
+            
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-up">
               <span style={{ color: BRAND_SECONDARY }}>Pais</span> <span style={{ color: 'white' }}>acolhidos</span>.<br />
               <span style={{ color: BRAND_SECONDARY }}>Filhos</span> <span style={{ color: 'white' }}>compreendidos</span>.<br />

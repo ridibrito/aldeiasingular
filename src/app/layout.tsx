@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -9,14 +9,15 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Aldeia Singular – Pais acolhidos. Filhos compreendidos. Lares fortalecidos.",
   description:
     "Maior comunidade brasileira de mães e pais de filhos com AHSD, oferecendo apoio, direção e pertencimento para transformar vidas.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
   alternates: { canonical: "/" },
   icons: {
     icon: "/logo.png",
