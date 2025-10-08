@@ -10,8 +10,6 @@ const BACKGROUND_COLOR = "#f3e9e9"; // Cor de fundo do site
 
 const HOTMART_LINK = "https://pay.hotmart.com/D101364302K?checkoutMode=2";
 
-
-
 type FAQ = {
   question: string;
   answer: string;
@@ -245,10 +243,8 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-
 export default function Home() {
 
-  
   // Hook para animações de scroll
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
@@ -271,14 +267,12 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
-  
-
 
   const faqs: FAQ[] = useMemo(
     () => [
       {
         question: "A Aldeia Singular substitui a avaliação de identificação de AHSD?",
-        answer: "Não. A Aldeia Singular é uma comunidade de apoio e informação  para pais e mães de crianças e adolescentes com AHSD.. Para identificação formal, recomendamos buscar profissionais especializados."
+        answer: "Não. A Aldeia Singular é uma comunidade de apoio e informação  para pais e mães de crianças e adolescentes com AHSD.. Para identificação formal, recomendamos buscar profissionais especializados."
       },
       {
         question: "Terei acesso a consultas clínicas em grupo ou individualizadas?",
@@ -356,13 +350,6 @@ export default function Home() {
 
   return (
     <div className="font-sans" style={{ backgroundColor: BACKGROUND_COLOR }}>
-      {/* Barra de Aviso */}
-        <div className="bg-[#49014E] text-white pt-2 pb-[-1] px-4">
-        <div className="container mx-auto flex items-center justify-center">
-            <Image src="/branco.png" alt="Logo Aldeia Singular" width={96} height={48} className="h-6 w-auto" />
-        </div>
-      </div>
-      
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-[100svh] flex items-center">
         <Image
@@ -687,7 +674,7 @@ export default function Home() {
               <p className="text-[#43085e] text-lg leading-relaxed">
                 Curadoria de cursos, livros, vídeos e ferramentas. Acesso contínuo e organizado ao referencial teórico da Dra. Angela Virgolim,  PhD em Altas Habilidades e Superdotação, bem como a conteúdos como artigos, cursos, palestras e lives exclusivas, e-books e muito mais.
               </p>
-            </div>
+            </div]
             
             {/* Card grande com imagem - visível apenas em desktop */}
             <div className={`hidden lg:block lg:col-span-4 ${isVisible.angela ? 'animate-fade-in-right' : ''}`}>
@@ -721,8 +708,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
 
       {/* Seção 05 - Pra quem é */}
       <section 
@@ -849,7 +834,7 @@ export default function Home() {
                   Sou psicóloga, PhD em Psicologia Educacional pela University of Connecticut, especializando-se em Psicologia da Superdotação pelo Renzulli Center for Creativity, Gifted Education, and Talent Development.
                 </p>
                 <p className="text-base">
-                  Nos meus últimos 30 anos formei mais de 500 profissionais para atuarem em AHSD, acolhi mais de 2000 famílias com os mais variados desafios. Porém, nos últimos anos muitos pais me afirmaram que cursos não eram suficientes, que existem muitos e nem todos são confiáveis.
+                  Nos meus últimos 30 anos formei mais de 500 profissionais para atuarem em AHSD, acolhi mais de 2000 famílias com os mais variados desafios. Porém, nos últimos anos muitos pais me affirmaram que cursos não eram suficientes, que existem muitos e nem todos são confiáveis.
                 </p>
                 <p className="text-base">
                   Ter acesso a profissionais especializados é caro e muitas vezes o que eles precisam é apoio, suporte e uma base conhecimento de referência. Foi escutando por anos e entendendo as dores de cada um desses pais que eu acolhi, que resolvi não só atuar na formação de profissionais, mas também de construir algo que pudesse mudar a vida das famílias, com um olhar direcionado a cuidar de quem cuida.
