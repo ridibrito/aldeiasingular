@@ -936,7 +936,7 @@ export default function Home() {
                 <PrimaryButton href={HOTMART_LINK} hotmart target="_blank">
                   Entrar na Aldeia Singular
                 </PrimaryButton>
-                <SecondaryButton href="https://wa.me/5511999999999">
+                <SecondaryButton href="https://wa.me/5561999093760">
                   <WhatsAppIcon />
                    Whatsapp
                 </SecondaryButton>
