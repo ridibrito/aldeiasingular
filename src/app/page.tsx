@@ -959,7 +959,7 @@ export default function Home() {
                 <ul className="space-y-2 text-sm text-white/80">
                   <li><a href="#" className="hover:text-[#f9b214] transition-colors">Técnico</a></li>
                   <li><a href="#" className="hover:text-[#f9b214] transition-colors">Financeiro</a></li>
-                  <li><a href="https://wa.me/5511999999999" className="hover:text-[#f9b214] transition-colors">Dúvidas (WhatsApp)</a></li>
+                  <li><a href="https://wa.me/5561999093760" className="hover:text-[#f9b214] transition-colors">Dúvidas (WhatsApp)</a></li>
                   <li><a href="#" className="hover:text-[#f9b214] transition-colors">Políticas</a></li>
                 </ul>
               </div>
